@@ -1,25 +1,19 @@
 class Post < ActiveRecord::Base
   
   def last_title_line
-    
-    return if title_words.length == 1
-    
-    if title_words.length == 2
-      if title_words.last.length + title_words[-2].length < 9
-        return make_last_line
-      else
-        return
-      end
-    end
-      
-    if title_words.length > 2
+    case title_words.length
+    when 1
+    when 2
+      make_last_line if title_words.last.length + title_words[-2].length < 9
+    else
       make_last_line
     end
-    
   end
 
-
-
+  def first_title_line
+    title.sub(/#{last_title_line}$/, "").strip
+  end
+  
   private ###############
   
   def make_last_line
@@ -29,7 +23,6 @@ class Post < ActiveRecord::Base
       return title_words.last
     end
   end
-  
   
   def title_words
     title.split
