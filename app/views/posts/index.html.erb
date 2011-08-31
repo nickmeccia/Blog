@@ -1,16 +1,48 @@
+<%= link_to "New Post", new_post_path %>
 
-	<div id="post_head">
-		<h1>THIS IS A BLOG POST, SON</h1>
-	</div>
+<% @posts.each do |post| %>
+	<%= post.title %>
+<% end %>
 
-	<div id="post_left">
-		<p class="serif">
-			asdfasdfa;sldkgjalsakljdfglakjdfhlgakjdfhglakjdfhjasdhgakjhf
-		</p>
-	</div>
 
-<div id="post_right">
-	<p class="serif">
-		Day 34 The horrors of this labyrinth never cease.  Today I thought I found an escape tunnel but it ended up placing me on a different part of this maze of horrors.  I don’t know how I was placed in this awful system of tunnels, or why I was done so completely naked save a solitary bow on my head and a pair of high heels, but if I ever find the people who have done this to me, I will kill them.  I will kill them all.
+
+<div id="post_title_top_left">
+	<h1>THIS IS A BLOG</h1>
+</div>
+
+<div id="post_title_top_right">
+	
+</div>
+
+<div id="float_clear">
+</div>
+
+<div id="post_title_bottom_left">
+	
+</div>
+
+<div id="post_title_bottom_right">
+	<h2>POST, SON</h2>
+</div>
+
+<div id="float_clear">
+</div>
+
+<div id="post_tags">
+	<p class="body">
+		APR
+	</p>
+	<p class="date">
+		07
+	</p>
+	<p class="date">
+		1986
 	</p>
 </div>
+
+<div id="post_body">
+	<p class="body">Day 34 The horrors of this labyrinth never cease.  Today I thought I found an escape tunnel but it ended up placing me on a different part of this maze of horrors.  I don’t know how I was placed in this awful system of tunnels, or why I was done so completely naked save a solitary bow on my head and a pair of high heels, but if I ever find the people who have done this to me, I will kill them.  I will kill them all.	
+	</p>
+</div>
+
+

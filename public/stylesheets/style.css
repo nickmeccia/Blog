@@ -6,32 +6,45 @@
 /******************* layout *******************/
 
 #container {
-	width: 600px;
+	width: 500px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color:purple;
 }
 
-#post_head {
-	float:right;
-	width: 500px;
-	background-color:black;
-}
-
-#post_left {
+#post_title_top_left {
 	float:left;
-	width:200px;
-	background-color:purple;
+	width: 400px;
+}
+
+#post_title_top_right {
+	float:right;
+	width:100px;
+}
+
+#post_title_bottom_left {
+	float:left;
+	width:100px;
+}
+
+#post_title_bottom_right {
+	float:right;
+	width:400px;
+}
+
+#post_tags {
+	float:left;
+	width:50px;
 	text-align:right;
 }
 
-#post_right {
+#post_body {
 	float:right;
 	width:400px;
-	background-color:blue;
 }
 
-
+#float_clear {
+	clear:both;
+}
 
 
 /**************** type styles ****************/
@@ -40,31 +53,32 @@ h1 {
 	font-family: french-canon;
 	font-style: italic;
 	font-weight:400;
-	font-size: 5em;
+	font-size: 4em;
+	letter-spacing:.15em;
 	text-align: right;
-	color:red;
 }
 
 h2 {
-	font-family: adelle;
+	font-family: french-canon;
 	font-style: italic;
-	font-weight: 800;
-	font-size: 5em;
-	text-align:right;
+	font-weight: 400;
+	font-size: 4em;
+	letter-spacing:.15em;
+	text-align:left;
 }
 
-p.serif {
+p.date {
 	font-family: french-canon;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 1em;
-	line-height: 1.5em;
+	line-height: 3.5em;
 }
 
-p.sans {
-	font-family: adelle;
+p.body {
+	font-family: french-canon;
 	font-style: normal;
-	font-weight: 100;
+	font-weight: 400;
 	font-size: 1em;
-	line-height: 1.5em;
+	line-height: 1.75em;
 }
