@@ -18,3 +18,11 @@ Feature: user views all posts
 		And I fill in "Body" with "Some Content"
 		And I press "Create"
 		Then "1" post should exist
+
+		Scenario: create a valid post
+			Given I am on the home page
+			And I follow "New Post"
+			When I fill in "Title" with "New Post"
+			And I fill in "Body" with "Some Content"
+			And I press "Create"
+			Then I should be on the home page

@@ -3,9 +3,7 @@ require 'spec_helper'
 describe PostsController do
   it "finds all posts" do
     post = Post.create!(:title => "Some Post")
-    
     get :index
-    
     assigns[:posts].should == [post]
   end
   
@@ -14,5 +12,10 @@ describe PostsController do
     post :create, :post => { :title => "asdf", :body => "asdfasdf" }
     #check that a post is created with those parameters
     Post.exists?(:title => "asdf", :body => "asdfasdf").should == true
+  end
+
+  it "redirects to the home page" do
+    post :create, :post => { :title => "asdf", :body => "asdfasdf" }
+    response.should redirect_to(root_path)
   end
 end
