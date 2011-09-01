@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
     case title_words.length
     when 1
     when 2
-      make_last_line if title_words.last.length + title_words[-2].length < 9
+      make_last_line if title_words.last.length + title_words[-2].length < 15
     else
       make_last_line
     end
@@ -17,7 +17,7 @@ class Post < ActiveRecord::Base
   private ###############
   
   def make_last_line
-    if title_words.last.length < 4
+    if title_words.last.length < 6
       return "#{title_words[-2]} #{title_words.last}"
     else
       return title_words.last

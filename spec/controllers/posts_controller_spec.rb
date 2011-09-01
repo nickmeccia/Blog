@@ -18,4 +18,12 @@ describe PostsController do
     post :create, :post => { :title => "asdf", :body => "asdfasdf" }
     response.should redirect_to(root_path)
   end
+  
+  it "destroys a post" do
+    new_post = Post.create!(:title => "Foo")
+    
+    post :destroy, :id => new_post.id
+    
+    Post.exists?(:title => "Foo").should == false
+  end
 end

@@ -26,3 +26,10 @@ Feature: user views all posts
 			And I fill in "Body" with "Some Content"
 			And I press "Create"
 			Then I should be on the home page
+			
+		Scenario: delete a post
+			Given a post exists with title: "asdf"
+			And I am on the home page
+			When I click the "Destroy" link for the post with title "asdf"
+			Then I am on the home page
+			And There is no post with title: "asdf"

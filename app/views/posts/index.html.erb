@@ -2,7 +2,7 @@
 
 <% @posts.each do |post| %>
 	
-	
+<div id="post_<%= post.id %>">
 	
 
 
@@ -39,7 +39,11 @@
 	<p class="body">
 		<%= post.body %>
 	</p>
+<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
 </div>
 
+
+
+</div>
 <% end %>
 
