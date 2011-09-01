@@ -1,8 +1,5 @@
 
 
-
-
-
 /******************* layout *******************/
 
 #container {
@@ -35,6 +32,7 @@
 	float:left;
 	width:50px;
 	text-align:right;
+/*	padding-top:10px;*/
 /*	background-color:red;*/
 }
 

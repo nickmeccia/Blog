@@ -1,6 +1,13 @@
 require 'spec_helper'
 
 describe PostsController do
+  include Devise::TestHelpers
+
+  before (:each) do
+    @admin = Admin.create!(:email => "nickmeccia@gmail.com", :password => "nickisawesome", :password_confirmation => "nickisawesome")
+    sign_in @admin    
+  end
+  
   it "finds all posts" do
     post = Post.create!(:title => "Some Post")
     get :index
