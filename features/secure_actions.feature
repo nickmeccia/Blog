@@ -33,3 +33,13 @@ Feature: Updating posts
 		When I click the "Destroy" link for the post with title "asdf"
 		Then I am on the home page
 		And There is no post with title: "asdf"
+		
+	Scenario: edit a post
+		Given a post exists with title: "Old Title"
+		And I am on the home page
+		When I click the "Edit" link for the post with title "Old Title"
+		And I fill in "Title" with "New Title"
+		And I press "Update Post"
+		Then I should be on the home page
+		And "1" post should exist with title: "New Title"
+		And no post exists with title "Old Title"

@@ -24,22 +24,23 @@
 
 		<div id="post_tags">
 			<p class="date">
-				APR
+				<%= post.created_at.strftime('%b') %>
 			</p>
 			<p class="date">
-				07
+				<%= post.created_at.strftime('%d') %>
 			</p>
 			<p class="date">
-				1986
+					<%= post.created_at.strftime('%Y') %>
 			</p>
 		</div>
 
 		<div id="post_body">
 			<p class="body">
-				<%= post.body %>
+				<%= post.body.html_safe if !post.body.nil? %>
 			</p>	
 		<% if admin_signed_in? %>
 			<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+			<%= link_to 'Edit', edit_post_path(post) %>
 		<% end %>
 		</div>
 		

@@ -1,11 +1,30 @@
+body {
+	font-family: french-canon;
+	font-style: normal;
+	font-weight: 400;
+}
 
+#wrap {
+	width: 580px;
+	position:relative;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /******************* layout *******************/
 
-#container {
+#container_l {
 	width: 500px;
-	margin-left: auto;
-	margin-right: auto;
+	float:left;
+/*	margin-left: auto;
+	margin-right: auto;*/
+}
+
+#container_r {
+	width: 80px;
+	float:right;
+	position:fixed;
+	display: block;
 }
 
 #post_title_top_left {
@@ -20,17 +39,17 @@
 
 #post_title_bottom_left {
 	float:left;
-	width:100px;
+	width:150px;
 }
 
 #post_title_bottom_right {
 	float:right;
-	width:400px;
+	width:350px;
 }
 
 #post_tags {
 	float:left;
-	width:50px;
+	width:120px;
 	text-align:right;
 /*	padding-top:10px;*/
 /*	background-color:red;*/
@@ -38,8 +57,8 @@
 
 #post_body {
 	float:right;
-	width:400px;
-	padding-bottom:100px;
+	width:350px;
+	padding-bottom:120px;
 	padding-top:10px;
 /*	background-color:purple;*/
 }
@@ -55,8 +74,8 @@ h1 {
 	font-family: french-canon;
 	font-style: italic;
 	font-weight:400;
-	font-size: 2.5em;
-	letter-spacing:.15em;
+	font-size: 2em;
+	letter-spacing:.5em;
 	text-align: right;
 	text-transform:uppercase;
 }
@@ -65,8 +84,8 @@ h2 {
 	font-family: french-canon;
 	font-style: italic;
 	font-weight: 400;
-	font-size: 2.5em;
-	letter-spacing:.15em;
+	font-size: 2em;
+	letter-spacing:.5em;
 	text-align:left;
 	text-transform:uppercase;
 }
@@ -77,12 +96,15 @@ p.date {
 	font-weight: 400;
 	font-size: .75em;
 	line-height: 3.5em;
+	text-transform:uppercase;
+	padding-top:.9em;
 }
 
-p.body {
+#post_body p {
 	font-family: french-canon;
 	font-style: normal;
 	font-weight: 400;
 	font-size: .75em;
 	line-height: 1.8em;
+	padding-bottom:.9em;
 }

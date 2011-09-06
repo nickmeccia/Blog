@@ -20,3 +20,11 @@ end
 Then /^There is no post with title: "([^"]*)"$/ do |title|
   Post.exists?(:title => title).should == false
 end
+
+Then /^"([^"]*)" post should exist with title: "([^"]*)"$/ do |total, title|
+  Post.where(:title => title).length.should == total.to_i
+end
+
+Then /^no post exists with title "([^"]*)"$/ do |title|
+  Post.where(:title => title).should == []
+end

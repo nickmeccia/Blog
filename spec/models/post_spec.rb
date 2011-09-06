@@ -32,6 +32,6 @@ describe Post do
     it "returns all but the last word" do
       post = Post.new(:title => "This is a blog post, person")
       post.first_title_line.should == "This is a blog post,"
-    end
+    end    
   end
 end
