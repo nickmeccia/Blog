@@ -26,6 +26,7 @@ body {
 	top: 25px;
 	width: 80px;
 	float: left;
+	z-index:-1;
 }
 #container_r img {
 	margin-left: 540px;
