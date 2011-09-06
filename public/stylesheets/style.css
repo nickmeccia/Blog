@@ -9,22 +9,26 @@ body {
 	position:relative;
 	margin-left: auto;
 	margin-right: auto;
+	top:25px;
 }
 
 /******************* layout *******************/
 
 #container_l {
 	width: 500px;
-	float:left;
-/*	margin-left: auto;
-	margin-right: auto;*/
+	margin-left: auto;
+	margin-right: auto;
+	float: left;
 }
 
 #container_r {
+	position: fixed;
+	top: 25px;
 	width: 80px;
-	float:right;
-	position:fixed;
-	display: block;
+	float: left;
+}
+#container_r img {
+	margin-left: 540px;
 }
 
 #post_title_top_left {
@@ -51,8 +55,7 @@ body {
 	float:left;
 	width:120px;
 	text-align:right;
-/*	padding-top:10px;*/
-/*	background-color:red;*/
+	padding-top:15px; /*is necessary when <p> tags are used in the browser editor*/
 }
 
 #post_body {
@@ -60,11 +63,15 @@ body {
 	width:350px;
 	padding-bottom:120px;
 	padding-top:10px;
-/*	background-color:purple;*/
 }
 
 #float_clear {
 	clear:both;
+}
+
+#admin_nav {
+	padding-bottom:40px;
+	padding-left:150px;
 }
 
 
@@ -95,9 +102,8 @@ p.date {
 	font-style: normal;
 	font-weight: 400;
 	font-size: .75em;
-	line-height: 3.5em;
+	line-height: 2.7em;
 	text-transform:uppercase;
-	padding-top:.9em;
 }
 
 #post_body p {
