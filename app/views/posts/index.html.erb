@@ -9,7 +9,7 @@
 <% @posts.each do |post| %>
 	<div id="post_<%= post.id %>">
 		<div id="post_title_top_left">
-			<h1><%= post.first_title_line %></h1>
+			<div id="right_aligned"><h1><%= ohs_top(post.first_title_line) %></h1></div>
 		</div>
 
 		<div id="post_title_top_right"></div>
@@ -17,12 +17,12 @@
 		<div id="post_title_bottom_left"></div>
 
 		<div id="post_title_bottom_right">
-			<h2><%= post.last_title_line %></h2>
+			<h2><%= ohs_bottom(post.last_title_line) %></h2>
 		</div>
 
 		<div id="float_clear"></div>
 
-		<div id="post_tags">
+		<div id="post_date">
 			<p class="date">
 				<%= post.created_at.strftime('%b') %>
 			</p>
@@ -42,8 +42,10 @@
 			<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
 			<%= link_to 'Edit', edit_post_path(post) %>
 		<% end %>
+		<%= image_tag post.photo.url if !post.photo.url.nil? %>
+		<%= image_tag('/images/divider.png')%>
 		</div>
-		
+				
 	</div>
 <% end %>
 

@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'devise'
 gem 'escape_utils'
 gem 'heroku'
+gem 'paperclip'
 
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
   
+  has_attached_file :photo
+    
   def last_title_line
     case title_words.length
     when 1
@@ -13,7 +15,7 @@ class Post < ActiveRecord::Base
   def first_title_line
     title.sub(/#{last_title_line}$/, "").strip
   end
-  
+    
   private ###############
   
   def make_last_line
@@ -27,4 +29,5 @@ class Post < ActiveRecord::Base
   def title_words
     title.split
   end
+  
 end

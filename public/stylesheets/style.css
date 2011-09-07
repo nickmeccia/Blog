@@ -1,3 +1,13 @@
+a:link, a:visited, a:hover, a:active {
+	color:#e64310;
+	text-decoration:none;
+	font-family: french-canon;
+	font-style: normal;
+	font-weight: 400;
+	font-size: .67em;
+	text-transform:uppercase;
+}
+
 body {
 	font-family: french-canon;
 	font-style: normal;
@@ -52,18 +62,22 @@ body {
 	width:350px;
 }
 
-#post_tags {
+#post_date {
 	float:left;
 	width:120px;
 	text-align:right;
-	padding-top:15px; /*is necessary when <p> tags are used in the browser editor*/
+	padding-top:17px; /*is necessary when <p> tags are used in the browser editor*/
 }
 
 #post_body {
 	float:right;
 	width:350px;
-	padding-bottom:120px;
+	padding-bottom:80px;
 	padding-top:10px;
+}
+#post_body img {
+	padding-top:20px;
+	z-index:-2;
 }
 
 #float_clear {
@@ -78,15 +92,34 @@ body {
 
 /**************** type styles ****************/
 
+#right_aligned {
+	text-align: right;
+}
+
 h1 {
 	font-family: french-canon;
 	font-style: italic;
 	font-weight:400;
 	font-size: 2em;
 	letter-spacing:.5em;
-	text-align: right;
 	text-transform:uppercase;
+	display:inline;
+	text-align: right;
 }
+
+
+h3 {
+	font-family: french-canon;
+	font-style: italic;
+	font-weight: 400;
+	font-size: 2em;
+	letter-spacing:.5em;
+	text-transform:uppercase;
+	display:inline;
+	text-align:right;
+	color:#e64310;
+}
+
 
 h2 {
 	font-family: french-canon;
@@ -96,13 +129,15 @@ h2 {
 	letter-spacing:.5em;
 	text-align:left;
 	text-transform:uppercase;
+	display:inline;
 }
+
 
 p.date {
 	font-family: french-canon;
 	font-style: normal;
 	font-weight: 400;
-	font-size: .75em;
+	font-size: .9em;
 	line-height: 2.7em;
 	text-transform:uppercase;
 }
@@ -111,7 +146,7 @@ p.date {
 	font-family: french-canon;
 	font-style: normal;
 	font-weight: 400;
-	font-size: .75em;
+	font-size: .9em;
 	line-height: 1.8em;
 	padding-bottom:.9em;
 }
