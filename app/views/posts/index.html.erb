@@ -42,7 +42,7 @@
 			<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
 			<%= link_to 'Edit', edit_post_path(post) %>
 		<% end %>
-		<%= image_tag post.photo.url if !post.photo.url.nil? %>
+		<%= image_tag post.photo.url if post.photo.exists? %>
 		<%= image_tag('/images/divider.png')%>
 		</div>
 				

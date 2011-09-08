@@ -10,6 +10,7 @@ gem 'devise'
 gem 'escape_utils'
 gem 'heroku'
 gem 'paperclip'
+gem 'aws-s3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
