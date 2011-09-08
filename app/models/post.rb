@@ -1,11 +1,18 @@
 class Post < ActiveRecord::Base
   
-  has_attached_file :photo,
-    :storage => :s3,
-    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
-    :path => ":attachment/:id/:style.:extension",
-    :bucket => 'yourbucket'
-  end
+#  has_attached_file :photo,
+ #   :storage => :s3,
+  #  :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+   # :path => ":attachment/:id/:style.:extension",
+    #:bucket => '8th_Light_Blog'
+
+    has_attached_file :photo, 
+                      #...
+                      :storage        => :s3, 
+                      :bucket         => '8th_Light_Blog',
+                      :s3_credentials => { :access_key_id     => "AKIAJI27ZNCVLTZCWKQQ", 
+                                           :secret_access_key => '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' }
+    
     
   def last_title_line
     case title_words.length
