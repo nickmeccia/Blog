@@ -1,10 +1,11 @@
 class Post < ActiveRecord::Base
   
-  has_attached_file :photo
-  :storage => :s3,
-  :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
-  :path => ":attachment/:id/:style.:extension",
-  :bucket => 'yourbucket'
+  has_attached_file :photo,
+    :storage => :s3,
+    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+    :path => ":attachment/:id/:style.:extension",
+    :bucket => 'yourbucket'
+  end
     
   def last_title_line
     case title_words.length
