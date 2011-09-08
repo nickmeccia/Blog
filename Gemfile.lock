@@ -30,6 +30,10 @@ GEM
     activesupport (3.0.10)
     addressable (2.2.6)
     arel (2.0.10)
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
     bcrypt-ruby (3.0.0)
     builder (2.1.2)
     capybara (1.0.1)
@@ -139,6 +143,7 @@ GEM
     tzinfo (0.3.29)
     warden (1.0.5)
       rack (>= 1.0)
+    xml-simple (1.1.0)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
@@ -146,6 +151,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-s3
   capybara
   cucumber-rails
   database_cleaner
