@@ -1,11 +1,11 @@
+
+/******************* basics *******************/
+
 a:link, a:visited, a:hover, a:active {
-	color:#e64310;
-	text-decoration:none;
-	font-family: french-canon;
-	font-style: normal;
-	font-weight: 400;
+	color: #e64310;
+	text-decoration: none;
+	text-transform: uppercase;
 	font-size: .67em;
-	text-transform:uppercase;
 }
 
 body {
@@ -14,74 +14,14 @@ body {
 	font-weight: 400;
 }
 
-#wrap {
-	width: 580px;
-	position:relative;
-	margin-left: auto;
-	margin-right: auto;
-	top:25px;
-}
-
 /******************* layout *******************/
 
-#container_l {
-	width: 500px;
+#wrap {
+	width: 580px;
+	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	float: left;
-}
-
-#container_r {
-	position: fixed;
 	top: 25px;
-	width: 80px;
-	float: left;
-	z-index:-1;
-}
-#container_r img {
-	margin-left: 540px;
-}
-
-#post_title_top_left {
-	float:left;
-	width: 400px;
-}
-
-#post_title_top_right {
-	float:right;
-	width:100px;
-}
-
-#post_title_bottom_left {
-	float:left;
-	width:150px;
-}
-
-#post_title_bottom_right {
-	float:right;
-	width:350px;
-}
-
-#post_date {
-	float:left;
-	width:120px;
-	text-align:right;
-	padding-top:17px; /*is necessary when <p> tags are used in the browser editor*/
-}
-
-#post_body {
-	float:right;
-	width:350px;
-	padding-bottom:80px;
-	padding-top:10px;
-}
-#post_body img {
-	padding-top:20px;
-	z-index:-2;
-}
-
-#float_clear {
-	clear:both;
 }
 
 #admin_nav {
@@ -89,64 +29,106 @@ body {
 	padding-left:150px;
 }
 
+.each_post {
+	overflow: hidden;
+	width: 500px;
+}
 
-/**************** type styles ****************/
+div.each_post img {
+	z-index:-2;
+	float:right;
+}
 
-#right_aligned {
+#logo {
+	position: fixed;
+	top: 25px;
+	width: 80px;
+	float: left;
+	z-index: -1;
+}
+#logo img {
+	margin-left: 540px;
+}
+
+.title_top {
+	width: 400px;
+	float: left;
 	text-align: right;
 }
+
+.title_bottom {
+	width: 350px;
+	float: right;
+	text-align: left;
+}
+
+#float_clear {
+	clear:both;
+}
+
+/**************** type stuff ****************/
 
 h1 {
-	font-family: french-canon;
-	font-style: italic;
-	font-weight:400;
 	font-size: 2em;
 	letter-spacing:.5em;
-	text-transform:uppercase;
-	display:inline;
-	text-align: right;
-}
-
-
-h3 {
-	font-family: french-canon;
+	text-transform: uppercase;
+	display: inline;
 	font-style: italic;
-	font-weight: 400;
-	font-size: 2em;
-	letter-spacing:.5em;
-	text-transform:uppercase;
-	display:inline;
-	text-align:right;
-	color:#e64310;
 }
 
-
-h2 {
-	font-family: french-canon;
-	font-style: italic;
-	font-weight: 400;
-	font-size: 2em;
-	letter-spacing:.5em;
-	text-align:left;
-	text-transform:uppercase;
-	display:inline;
+.red_o {
+	color: #e64310;	
 }
 
-
-p.date {
-	font-family: french-canon;
-	font-style: normal;
-	font-weight: 400;
-	font-size: .9em;
-	line-height: 2.7em;
-	text-transform:uppercase;
-}
-
-#post_body p {
-	font-family: french-canon;
-	font-style: normal;
-	font-weight: 400;
-	font-size: .9em;
+p {
 	line-height: 1.8em;
 	padding-bottom:.9em;
+	font-size: .9em;
+	float:right;
+	width:350px;	
 }
+
+.each_post:after {
+	content: url('/images/divider.png');
+	display: block;
+	float: right;
+	padding-top: 20px;
+	padding-bottom: 80px;
+}
+
+pubDate {
+	float:left;
+	width:120px;
+	text-align:right;
+	padding-top:13px;
+	display:block;
+	line-height: 2.7em;
+	text-transform:uppercase;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

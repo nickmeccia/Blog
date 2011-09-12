@@ -4,47 +4,39 @@
 		<%= link_to "sign out", destroy_admin_session_path, :method => :delete %>
 		<%= link_to "New Post", new_post_path %>
 	</div>
-<% end%>
+<% end %>
+
 
 <% @posts.each do |post| %>
-	<div id="post_<%= post.id %>">
-		<div id="post_title_top_left">
-			<div id="right_aligned"><h1><%= ohs_top(post.first_title_line) %></h1></div>
-		</div>
+	<div id="post_<%= post.id %>" class="each_post">
 
-		<div id="post_title_top_right"></div>
-		<div id="float_clear"></div>
-		<div id="post_title_bottom_left"></div>
-
-		<div id="post_title_bottom_right">
-			<h2><%= ohs_bottom(post.last_title_line) %></h2>
-		</div>
+		<h1>
+			<span class="title_top">
+				<%= ohs_title(post.first_title_line) %>
+			</span>
+			<span class="title_bottom">
+				<%= ohs_title(post.last_title_line) %>			
+			</span>
+		</h1>
 
 		<div id="float_clear"></div>
 
-		<div id="post_date">
-			<p class="date">
-				<%= post.created_at.strftime('%b') %>
-			</p>
-			<p class="date">
-				<%= post.created_at.strftime('%d') %>
-			</p>
-			<p class="date">
-				<%= post.created_at.strftime('%Y') %>
-			</p>
-		</div>
+		<pubDate>
+			<p><%= ohs_title(post.created_at.strftime('%b')) %></p>
+			<p><%= ohs_date(post.created_at.strftime('%d')) %></p>
+			<p><%= ohs_date(post.created_at.strftime('%Y')) %></p>
+		</pubDate>
 
-		<div id="post_body">
-			<p class="body">
-				<%= post.body.html_safe if !post.body.nil? %>
-			</p>	
+		<p><%= post.body.html_safe if !post.body.nil? %></p>	
+				
 		<% if admin_signed_in? %>
-			<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
-			<%= link_to 'Edit', edit_post_path(post) %>
+			<p>
+				<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+				<%= link_to 'Edit', edit_post_path(post) %>
+			</p>
 		<% end %>
+
 		<%= image_tag post.photo.url if post.photo.exists? %>
-		<%= image_tag('/images/divider.png')%>
-		</div>
 				
 	</div>
 <% end %>
