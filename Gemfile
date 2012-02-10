@@ -6,7 +6,7 @@ gem 'rails', '3.0.10'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'devise'
+gem 'devise', '1.4.3'
 gem 'escape_utils'
 gem 'heroku'
 gem 'paperclip'
