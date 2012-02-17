@@ -19,7 +19,7 @@ describe Post do
     
     it "returns nothing if it is only one short word long" do
       post = Post.new(:title => "123")
-      post.last_title_line.should be_blank
+      post.last_title_line.should == ""
     end
     
     it "returns nothing if two short words" do

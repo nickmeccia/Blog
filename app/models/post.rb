@@ -17,6 +17,7 @@ class Post < ActiveRecord::Base
   def last_title_line
     case title_words.length
     when 1
+      ""
     when 2
       make_last_line if title_words.last.length + title_words[-2].length < 15
     else
