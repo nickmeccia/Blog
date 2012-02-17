@@ -7,6 +7,6 @@
 # end
 
 Given /^"([^"]*)" admin exists$/ do |arg1|
-  Admin.create!(:email => "nickmeccia@gmail.com", :password => "awesome", :password_confirmation => "awesome")
+  Admin.create!(:email => "nickmeccia@gmail.com", :password => "nickisawesome", :password_confirmation => "nickisawesome")
 end
 
