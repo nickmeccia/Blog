@@ -4,7 +4,7 @@ describe PostsController do
   include Devise::TestHelpers
 
   before (:each) do
-    @admin = Admin.create!(:email => "nickmeccia@gmail.com", :password => "nickisawesome", :password_confirmation => "nickisawesome")
+    @admin = Admin.create!(:email => "nickmeccia@gmail.com", :password => "awesome", :password_confirmation => "awesome")
     sign_in @admin    
   end
   

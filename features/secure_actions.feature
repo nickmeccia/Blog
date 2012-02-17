@@ -8,7 +8,7 @@ Feature: Updating posts
 		Given "1" admin exists
 		And I am on the sign in page
 		And I fill in "Email" with "nickmeccia@gmail.com"
-		And I fill in "Password" with "nickisawesome"
+		And I fill in "Password" with "awesome"
 		And I press "Sign in"
 		
 	Scenario: create a valid post
